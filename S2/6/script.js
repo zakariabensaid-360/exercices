@@ -7,7 +7,7 @@ const chercher = (texte) => {
   appels++;
   
 
-  const resultat = villes.filter((v) => v.toLowerCase().includes(texte.toLowerCase()));
+  const resultat = texte == "" ? [] : villes.filter((v) => v.toLowerCase().includes(texte.toLowerCase()));
   
   info.textContent = `Appels : ${appels} | ${resultat.length} résultats trouvés`;
 
