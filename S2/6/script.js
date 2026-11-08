@@ -10,6 +10,15 @@ const chercher = (texte) => {
   const resultat = villes.filter((v) => v.toLowerCase().includes(texte.toLowerCase()));
   
   info.textContent = `Appels : ${appels} | ${resultat.length} résultats trouvés`;
+
+    resultats.replaceChildren()
+  resultat.forEach(result => {
+    const li =  document.createElement("li")
+    li.textContent = result
+    li.style.font = "bold"
+
+    resultats.append(li)
+  })
   
 };
 
@@ -29,6 +38,7 @@ function antiRebond(fn, delay) {
 
 const input = document.getElementById("recherche");
 const info = document.getElementById("info");
+const resultats = document.getElementById("resultats")
 
 const noRebound = antiRebond(chercher, 300);
 
