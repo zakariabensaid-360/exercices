@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<body class="p-8 max-w-md">
+  <form id="inscription" class="space-y-3" novalidate>
+    <input name="email" placeholder="Email" class="border p-2 w-full" />
+    <p data-erreur="email" class="text-red-600 text-sm"></p>
+    <input name="telephone" placeholder="Téléphone" class="border p-2 w-full" />
+    <p data-erreur="telephone" class="text-red-600 text-sm"></p>
+    <input name="motdepasse" type="password" placeholder="Mot de passe" class="border p-2 w-full" />
+    <p data-erreur="motdepasse" class="text-red-600 text-sm"></p>
+    <button  class="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50">Créer le compte</button>
+  </form>
+  <p id="succes" class="text-green-700 mt-4"></p>
+  <script src="./script.js" ></script>
+</body>
