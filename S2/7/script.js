@@ -67,15 +67,7 @@ form.addEventListener("submit", (e) => {
     if (errMessage) isValid = false;
   });
   
-  if (isValid) {
-    succes.textContent = "Compte créé";
-    form.reset();
-    inputs.forEach(input => input.classList.remove("border-green-500", "border-red-500"));
-    button.disabled = true;
-    Object.keys(touched).forEach(key => delete touched[key]);
-  } else {
-    succes.textContent = "";
-  }
+
 });
 
 
